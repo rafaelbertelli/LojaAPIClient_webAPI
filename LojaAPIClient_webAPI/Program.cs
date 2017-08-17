@@ -14,6 +14,7 @@ namespace LojaAPIClient_webAPI
         {
             string conteudo;
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://www.mocky.io/v2/52aaf5deee7ba8c70329fb7d");
+            request.Method = "GET";
 
             WebResponse response = request.GetResponse();
             using(Stream responseStream = response.GetResponseStream())
